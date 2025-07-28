@@ -480,3 +480,67 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* Experience Table Styling */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 2rem;
+  border-radius: 12px;
+  background: var(--primary-color-2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+.experience-table thead {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.experience-table th,
+.experience-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--container-border);
+  color: var(--secondary-color-2);
+}
+
+.experience-table td {
+  font-weight: 500;
+}
+
+.experience-table tbody tr {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.experience-table tbody tr:hover {
+  background-color: rgba(100, 100, 255, 0.05);
+  transform: scale(1.01);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-table th,
+  .experience-table td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Dark Mode Enhancements */
+[theme="dark"] .table-container {
+  background-color: #1e1e1e;
+}
+
+[theme="dark"] .experience-table thead {
+  background-color: #333;
+}
+
+[theme="dark"] .experience-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
